@@ -1,0 +1,99 @@
+%% i6-style slides
+%% Customized by Tran
+
+\documentclass[11pt, a4paper, landscape]{article}
+\usepackage[userlastpage,triangle,utf-8,noblackslide]{NeyDreuwSlides_Oct08}
+\usepackage{snapshot}
+\usepackage{mathtools}
+\usepackage[caption=false]{subfig}
+
+% slides tunning
+% \setlength{\footskip}{0pt} % default ist +30pt - negative Werte nicht moeglich
+% \setlength{\headsep}{-10pt} % default ist +25pt - negative Werte moeglich
+% \addtolength{\topmargin}{-5mm} % bewegt den gesamten Inhalt der Seite nach oben
+% \setlength{\textheight}{170mm} % wenn moeglich nicht veraendern, beinflusst den Inhalt der Seiten und somit auch die Anzahl der Seiten!
+
+% math operators and
+% symbols %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*{\nat}{\ensuremath{\rm I\!N}\xspace}
+\newcommand*{\rel}{\ensuremath{\rm I\!R}\xspace}
+\newcommand*{\argmin}{\ensuremath{\operatornamewithlimits{argmin}}\xspace}
+\newcommand*{\argmax}{\ensuremath{\operatornamewithlimits{argmax}}\xspace}
+\newcommand*{\congmod}{\ensuremath{\operatornamewithlimits{\cong}}\xspace}
+\newcommand*{\invers}{\ensuremath{\frac{1}}\xspace}
+\newcommand*{\ra}{\ensuremath{\Rightarrow}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% custom packages
+\usepackage{fancyvrb} %%% fancy verbatim to enable coloring within verbatim environments
+\usepackage{bbding}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{enumitem}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\renewcommand{\arraystretch}{1.5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% main title of the work (used for \TitlePage)
+\renewcommand*{\title}{Ongoing Work on Contextual Neural Machine Translation}
+% short title (used for \lfoot)
+\renewcommand*{\titleshort}{Contextual Neural Machine Translation}
+% (used for \TitlePage)
+\renewcommand*{\occasion}{}
+% short occasion title (used for \rfoot)
+\renewcommand*{\occasionshort}{}
+% default is \today (used for \TitlePage and \rfoot)
+\renewcommand*{\date}{\today}
+% all the authors of the work, can be long (used for \TitlePage)
+\renewcommand*{\author}{Duc Thanh Tran}
+% all the authors of the work, should be short (used for \lfoot)
+\renewcommand*{\authorshort}{D.T. Tran:\xspace}
+% all email address(es) of the authors (used for \TitlePage)
+\renewcommand*{\email}{\url{tran@i6.informatik.rwth-aachen.de}}
+% the author(s) who presented the work (used for \TitlePage)
+\renewcommand*{\mainauthor}{Duc Thanh Tran}
+% presenter mail address(es) (used for \FinalPage)
+\renewcommand*{\mainauthoremail}{\url{tran@i6.informatik.rwth-aachen.de}}
+% web address (used for \TitlePage _and_ \FinalPage)
+%\renewcommand*{\www}{http://www.hltpr.rwth-aachen.de/}
+% keywords, can be used for PDF summary
+\newcommand*{\keywords}{}
+
+% will be set into the PDF document summary
+\hypersetup{ pdftitle={\title}, pdfsubject={\occasion},
+  pdfauthor={\author}, pdfkeywords={\keywords}, pdfpageduration = 2,
+  pdfpagetransition = {Box /M /O /D 1}, }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\listfiles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\TitlePage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline {Unsupervised MT: Word-by-Word Translation}
+
+\vfill
+\begin{description}
+\item Motivation
+\item Procedure
+\end{description}
+\vfill
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FinalPage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\bibliographystyle{i6bibliostyle}
+\bibliography{references}
+
+\end{document}
