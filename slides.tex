@@ -26,27 +26,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % custom packages
 \usepackage{fancyvrb} %%% fancy verbatim to enable coloring within verbatim environments
-\usepackage{bbding}
+%\usepackage{bbding}
 \usepackage{multirow}
 \usepackage{multicol}
 \usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
 
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 \renewcommand{\arraystretch}{1.5}
 
+\definecolor{myyellow}{RGB}{210,206,70}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % main title of the work (used for \TitlePage)
 \renewcommand*{\title}{Ongoing Work on Contextual Neural Machine Translation}
 % short title (used for \lfoot)
-\renewcommand*{\titleshort}{Contextual Neural Machine Translation}
+\renewcommand*{\titleshort}{Contextual NMT}
 % (used for \TitlePage)
 \renewcommand*{\occasion}{}
 % short occasion title (used for \rfoot)
 \renewcommand*{\occasionshort}{}
 % default is \today (used for \TitlePage and \rfoot)
-\renewcommand*{\date}{\today}
+\renewcommand*{\date}{Aug 02, 2018}
 % all the authors of the work, can be long (used for \TitlePage)
 \renewcommand*{\author}{Duc Thanh Tran}
 % all the authors of the work, should be short (used for \lfoot)
@@ -68,6 +72,7 @@
   pdfpagetransition = {Box /M /O /D 1}, }
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \listfiles
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -77,13 +82,60 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
-\headline {Unsupervised MT: Word-by-Word Translation}
+\headline{Contextual Neural Machine Translation}
 
 \vfill
 \begin{description}
-\item Motivation
-\item Procedure
+\item \hyperlink{sec:motivation}{Motivation}
+\item \hyperlink{sec:approach}{Approaches}
+\item \hyperlink{sec:experiments}{Experiments}
+\item \hyperlink{sec:summary_and_future_work}{Summary and Future Work}
 \end{description}
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline{Motivation}
+\hypertarget{sec:motivation}{}
+\vfill
+\begin{itemize}
+  \item Most neural machine translation (NMT) systems translate sentence by sentence
+  \item[]
+  \item[]
+  \begin{table}
+  \begin{center}
+  \begin{tabular}{l||c}
+    Source sentences & Correct translation of '\textcolor{orange}{it}' \\
+    \toprule
+    \textit{The \textcolor{brown}{monkey} ate the \textcolor{myyellow}{banana}. Because \textcolor{orange}{it} was hungry.} & \texttt{er} \\
+    \textit{The \textcolor{brown}{monkey} ate the \textcolor{myyellow}{banana}. Because \textcolor{orange}{it} ripe.} & \texttt{sie} \\
+    \textit{The \textcolor{brown}{monkey} ate the \textcolor{myyellow}{banana}. Because \textcolor{orange}{it} was tea-time.} & \texttt{es}
+  \end{tabular}
+  \end{center}
+  \end{table}
+  \item[]
+  \item Use other sentences as context information to improve translation process
+  \begin{itemize}
+    \item co-reference
+    \item inter-sential anaphora (e.g. pronouns referring to mentioned entities)
+  \end{itemize}
+\end{itemize}
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline{Experiments}
+\hypertarget{sec:experiments}{}
+\vfill
+\begin{itemize}
+  \item Most neural machine translation (NMT) systems translate sentence by sentence
+  \item[]
+  \item Use other sentences as context information to improve translation process
+  \begin{itemize}
+    \item improve translation of co-referenced words
+    \item 
+  \end{itemize}
+\end{itemize}
 \vfill
 
 
