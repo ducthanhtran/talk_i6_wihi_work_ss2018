@@ -9,3 +9,19 @@
 2018-07-19.15-22-59.calcium touch README.md
 2018-07-19.15-23-10.calcium vim README.md 
 2018-07-19.15-23-13.calcium git status
+2018-07-19.15-23-14.calcium git add .
+2018-07-19.15-23-22.calcium git commit -m 'first init - template from Kim'
+2018-07-19.15-23-27.calcium git push
+2018-07-22.15-05-21.cluster-cn-01 git pull
+2018-07-23.16-56-32.natrium git pull
+2018-07-23.16-59-11.natrium exit
+2018-07-23.17-00-43.natrium ssh calcium
+2018-07-23.18-42-16.natrium texstudio 
+2018-07-23.18-42-53.natrium git add .
+2018-07-23.18-42-55.natrium git add .
+2018-07-23.18-42-56.natrium git status
+2018-07-23.18-43-08.natrium git rm --cached .history.tran 
+2018-07-23.18-43-23.natrium git status
+2018-07-23.18-43-36.natrium echo .history.tran >> .git/info/exclude 
+2018-07-23.18-43-39.natrium git status
+2018-07-23.18-47-08.natrium git status

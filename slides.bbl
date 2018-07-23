@@ -1,3 +1,39 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect{Agrawal \& Turchi$^+$} 18]{agrawal_2018}
+R.~Agrawal, M.~Turchi, M.~Negri: \newblock Contextual Handling in Neural
+  Machine Translation: Look Behind, Ahead and on Both Sides.
+\newblock Vol., 2018.
+
+\bibitem[\protect{Bawden \& Sennrich$^+$} 18]{bawden_2018}
+R.~Bawden, R.~Sennrich, A.~Birch, B.~Haddow: \newblock Evaluating Discourse
+  Phenomena in Neural Machine Translation.
+\newblock In {\em Proceedings of the 2018 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long Papers)}, Vol.~1, pp. 1304--1313, 2018.
+
+\bibitem[\protect{Libovick{\`y} \& Helcl} 17]{libovicky_2017}
+J.~Libovick{\`y}, J.~Helcl: \newblock Attention Strategies for Multi-Source
+  Sequence-to-Sequence Learning.
+\newblock In {\em Proceedings of the 55th Annual Meeting of the Association for
+  Computational Linguistics (Volume 2: Short Papers)}, Vol.~2, pp. 196--202,
+  2017.
+
+\bibitem[\protect{Tiedemann \& Scherrer} 17]{tiedemann_2017}
+J.~Tiedemann, Y.~Scherrer: \newblock Neural Machine Translation with Extended
+  Context.
+\newblock In {\em Proceedings of the Third Workshop on Discourse in Machine
+  Translation}, pp. 82--92, 2017.
+
+\bibitem[\protect{Voita \& Sennrich$^+$} 18]{voita_2018}
+E.~Voita, R.~Sennrich, P.~Serdyukov, I.~Titov: \newblock Context-Aware Neural
+  Machine Translation Learns Anaphora Resolution.
+\newblock In {\em Proceedings of the 56th Annual Meeting of the Association for
+  Computational Linguistics, {ACL} 2018, Melbourne, Australia, July 15-20,
+  2018, Volume 1: Long Papers}, pp. 1264--1274, 2018.
+
+\bibitem[\protect{Zoph \& Knight} 16]{zoph_2016}
+B.~Zoph, K.~Knight: \newblock Multi-Source Neural Translation.
+\newblock In {\em Proceedings of NAACL-HLT}, pp. 30--34, 2016.
+
 \end{thebibliography}

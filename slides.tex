@@ -87,7 +87,8 @@
 \vfill
 \begin{description}
 \item \hyperlink{sec:motivation}{Motivation}
-\item \hyperlink{sec:approach}{Approaches}
+\item \hyperlink{sec:sota}{State of the Art Literature}
+\item \hyperlink{sec:ongoing_work}{Ongoing Work at i6}
 \item \hyperlink{sec:experiments}{Experiments}
 \item \hyperlink{sec:summary_and_future_work}{Summary and Future Work}
 \end{description}
@@ -101,41 +102,69 @@
 \begin{itemize}
   \item Most neural machine translation (NMT) systems translate sentence by sentence
   \item[]
-  \item[]
-  \begin{table}
-  \begin{center}
-  \begin{tabular}{l||c}
-    Source sentences & Correct translation of '\textcolor{orange}{it}' \\
-    \toprule
-    \textit{The \textcolor{brown}{monkey} ate the \textcolor{myyellow}{banana}. Because \textcolor{orange}{it} was hungry.} & \texttt{er} \\
-    \textit{The \textcolor{brown}{monkey} ate the \textcolor{myyellow}{banana}. Because \textcolor{orange}{it} ripe.} & \texttt{sie} \\
-    \textit{The \textcolor{brown}{monkey} ate the \textcolor{myyellow}{banana}. Because \textcolor{orange}{it} was tea-time.} & \texttt{es}
-  \end{tabular}
-  \end{center}
-  \end{table}
-  \item[]
-  \item Use other sentences as context information to improve translation process
+  \item Make use of other sentences in addition to exploit context information
   \begin{itemize}
-    \item co-reference
-    \item inter-sential anaphora (e.g. pronouns referring to mentioned entities)
+    \item reduce ambiguities in translation choices
+    \item example: cross-sentence anaphora \cite{voita_2018}
   \end{itemize}
 \end{itemize}
+\vspace*{0.5cm}
+\begin{table}
+ 	\caption{An English$
+ 		\to$German example of a cross-sentence anaphora problem. The translation of the pronoun '\textcolor{orange}{it}' depends on the previous sentence.}
+ 	\begin{center}
+ 		\begin{tabular}{l||c}
+ 			Source sentences & Correct translation of '\textcolor{orange}{it}' \\
+ 			\toprule
+ 			\textit{The \textcolor{brown}{monkey} ate the \textcolor{myyellow}{banana}. Because \textcolor{orange}{it} was hungry.} & \textup{er} \\
+ 			\textit{The \textcolor{brown}{monkey} ate the \textcolor{myyellow}{banana}. Because \textcolor{orange}{it} ripe.} & \textup{sie} \\
+ 			\textit{The \textcolor{brown}{monkey} ate the \textcolor{myyellow}{banana}. Because \textcolor{orange}{it} was tea-time.} & \textup{es}
+ 		\end{tabular}
+ 	\end{center}
+\end{table}
 \vfill
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
-\headline{Experiments}
-\hypertarget{sec:experiments}{}
+\headline{State of the Art Literature}
+\hypertarget{sec:sota}{}
 \vfill
 \begin{itemize}
-  \item Most neural machine translation (NMT) systems translate sentence by sentence
-  \item[]
-  \item Use other sentences as context information to improve translation process
-  \begin{itemize}
-    \item improve translation of co-referenced words
-    \item 
-  \end{itemize}
+  	\item Single encoder: concatenate sentences on source-/target side \\ \cite{tiedemann_2017,agrawal_2018}
+  	\vspace*{1cm}
+  	\item Multi-Encoder with attention mechanism
+  	\begin{itemize}
+  		\item Local context: feed surrounding sentences into seperate encoders. Combine context vectors:
+  		\begin{itemize}
+  			\item concatenation (like in \cite{zoph_2016})
+  			\item gated sum \cite{bawden_2018}
+  			\item hierarchical attention \cite{bawden_2018}
+  		\end{itemize}
+  	\end{itemize}
 \end{itemize}
+\vspace*{0.5cm}
+Remark: above methods only consider \emph{local} context
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline{Ongoing Work at i6}
+\hypertarget{sec:ongoing_work}{}
+\vfill
+\begin{enumerate}
+	\item Reproduce results from \cite{agrawal_2018}
+	\begin{itemize}
+		\item using Transformer model as well
+		\item first, find good baseline: hyperparameter search
+		\begin{itemize}
+			\item weight-tying
+			\item learning rates
+			\item checkpoints
+			\item $\ldots$
+		\end{itemize}
+		\item concatenate sentences with special token $<$BREAK$>$
+	\end{itemize}
+\end{enumerate}
 \vfill
 
 
