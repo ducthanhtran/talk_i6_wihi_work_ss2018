@@ -162,9 +162,87 @@ Remark: above methods only consider \emph{local} context
 			\item checkpoints
 			\item $\ldots$
 		\end{itemize}
-		\item concatenate sentences with special token $<$BREAK$>$
-	\end{itemize}
+		\item concatenate sentences with special token $<$BREAK$>$, \\
+    example: \texttt{sentence\_1} $<$BREAK$>$ \texttt{sentence\_2}
+ 	\end{itemize}
 \end{enumerate}
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline{Ongoing Work at i6 - Concatenation of sentences}
+\vfill
+\begin{table}
+  \begin{center}
+    \subfloat[Single target sentence.]{
+    \begin{tabular}{ccc|c}
+      \multicolumn{3}{c}{Source input} & Target input \\
+      \toprule
+      1 previous & $+$ current & & current \\
+      2 previous & $+$ current & & current \\
+      1 previous & $+$ current & $+$ 1 next & current \\
+      & \phantom{$+$} current & $+$ 1 next & current \\
+    \end{tabular}
+  }
+  \vspace*{0.5cm}
+  \subfloat[Multiple target sentence.]{
+  \begin{tabular}{ccc|cc}
+    \multicolumn{3}{c}{Source input} & Target input \\
+    \toprule
+    1 previous & $+$ current & & 1 previous & $+$ current \\
+    1 previous & $+$ current & $+$ 1 next & 1 previous & $+$ current \\
+  \end{tabular}
+  }
+  \end{center}
+\end{table}
+\vfill
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline{Experiments}
+\hypertarget{sec:experiments}{}
+\vfill
+\begin{table}
+  \caption{Selected data sets for experiments.}
+  \begin{center}
+    \begin{tabular}{l|c|c}
+      & IWSLT'17 EN-IT & WMT'18 DE-EN \\
+      \toprule
+      Train. & IWSLT'17 & WMT'18 \\
+      Dev. & \textit{tst2010} & \textit{newstest2016} \\
+      Test & \textit{tst2017} & \textit{newstest2017}
+    \end{tabular}
+  \end{center}
+\end{table}
+\begin{itemize}
+  \item English$\to$Italian: 
+\end{itemize}
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline{Experiments: Data set statistics}
+\vfill
+\begin{table}
+\caption{Corpus statistics for both IWSLT 2017 English$\to$Italian and WMT 2018 German$\to$English data sets.}
+\begin{center}
+  \begin{tabular}{lp{1cm}r|rp{0.05cm}c|rp{0.05cm}c}
+    & & & \multicolumn{3}{c|}{IWSLT'17 EN-IT} & \multicolumn{3}{c}{WMT'18 DE-EN} \\
+    & & & EN && IT & DE && EN \\
+    \toprule
+    \multirow{2}{*}{Train.} & & Sentences & \multicolumn{3}{c|}{232K} & \multicolumn{3}{c}{5.9M} \\
+    & & Running words & 4.7M && 4.4M & 160.9M && 157.7M \\
+    \midrule
+    \multirow{2}{*}{Dev.} & & Sentences & \multicolumn{3}{c|}{1.5K} & \multicolumn{3}{c}{3K} \\
+    & & Running words & 31K && 29K & 77K && 73K \\
+    \midrule
+    \multirow{2}{*}{Test} & & Sentences & \multicolumn{3}{c|}{1.1K} & \multicolumn{3}{c}{3K} \\
+    & & Running words & 22K && 20K & 76K && 73K \\
+  \end{tabular}
+\end{center}
+\end{table}
 \vfill
 
 
