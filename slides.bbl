@@ -12,12 +12,10 @@ R.~Bawden, R.~Sennrich, A.~Birch, B.~Haddow: \newblock Evaluating Discourse
   Chapter of the Association for Computational Linguistics: Human Language
   Technologies, Volume 1 (Long Papers)}, Vol.~1, pp. 1304--1313, 2018.
 
-\bibitem[\protect{Libovick{\`y} \& Helcl} 17]{libovicky_2017}
-J.~Libovick{\`y}, J.~Helcl: \newblock Attention Strategies for Multi-Source
-  Sequence-to-Sequence Learning.
-\newblock In {\em Proceedings of the 55th Annual Meeting of the Association for
-  Computational Linguistics (Volume 2: Short Papers)}, Vol.~2, pp. 196--202,
-  2017.
+\bibitem[\protect{Lison \& Tiedemann} 16]{lison_2016}
+P.~Lison, J.~Tiedemann: \newblock Opensubtitles2016: Extracting large parallel
+  corpora from movie and tv subtitles.
+\newblock Vol., 2016.
 
 \bibitem[\protect{Tiedemann \& Scherrer} 17]{tiedemann_2017}
 J.~Tiedemann, Y.~Scherrer: \newblock Neural Machine Translation with Extended

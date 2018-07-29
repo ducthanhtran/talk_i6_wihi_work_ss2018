@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.6.28)  24 JUL 2018 12:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.6.28)  29 JUL 2018 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -877,19 +877,280 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen171
 \l_MT_below_shortintertext_sep=\dimen172
 )
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks39
+\pgfutil@tempdima=\dimen173
+\pgfutil@tempdimb=\dimen174
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box34
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks40
+\pgfkeys@temptoks=\toks41
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks42
+))
+\pgf@x=\dimen175
+\pgf@y=\dimen176
+\pgf@xa=\dimen177
+\pgf@ya=\dimen178
+\pgf@xb=\dimen179
+\pgf@yb=\dimen180
+\pgf@xc=\dimen181
+\pgf@yc=\dimen182
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count132
+\c@pgf@countb=\count133
+\c@pgf@countc=\count134
+\c@pgf@countd=\count135
+\t@pgf@toka=\toks43
+\t@pgf@tokb=\toks44
+\t@pgf@tokc=\toks45
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count136
+\pgfsyssoftpath@bigbuffer@items=\count137
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen183
+\pgfmath@count=\count138
+\pgfmath@box=\box35
+\pgfmath@toks=\toks46
+\pgfmath@stack@operand=\toks47
+\pgfmath@stack@operation=\toks48
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count139
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen184
+\pgf@picmaxx=\dimen185
+\pgf@picminy=\dimen186
+\pgf@picmaxy=\dimen187
+\pgf@pathminx=\dimen188
+\pgf@pathmaxx=\dimen189
+\pgf@pathminy=\dimen190
+\pgf@pathmaxy=\dimen191
+\pgf@xx=\dimen192
+\pgf@xy=\dimen193
+\pgf@yx=\dimen194
+\pgf@yy=\dimen195
+\pgf@zx=\dimen196
+\pgf@zy=\dimen197
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen198
+\pgf@path@lasty=\dimen199
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen256
+\pgf@shorten@start@additional=\dimen257
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box36
+\pgf@hbox=\box37
+\pgf@layerbox@main=\box38
+\pgf@picture@serial@count=\count140
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen258
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen259
+\pgf@pt@y=\dimen260
+\pgf@pt@temp=\dimen261
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen262
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen263
+\pgf@sys@shading@range@num=\count141
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box39
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box40
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen264
+\pgf@nodesepend=\dimen265
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen266
+\pgffor@skip=\dimen267
+\pgffor@stack=\toks49
+\pgffor@toks=\toks50
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count142
+\pgfplotmarksize=\dimen268
+)
+\tikz@lastx=\dimen269
+\tikz@lasty=\dimen270
+\tikz@lastxsaved=\dimen271
+\tikz@lastysaved=\dimen272
+\tikzleveldistance=\dimen273
+\tikzsiblingdistance=\dimen274
+\tikz@figbox=\box41
+\tikz@figbox@bg=\box42
+\tikz@tempbox=\box43
+\tikz@tempbox@bg=\box44
+\tikztreelevel=\count143
+\tikznumberofchildren=\count144
+\tikznumberofcurrentchild=\count145
+\tikz@fig@count=\count146
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count147
+\pgfmatrixcurrentcolumn=\count148
+\pgf@matrix@numberofcolumns=\count149
+)
+\tikz@expandcount=\count150
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
 (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count132
+\c@KVtest=\count151
 \sf@farskip=\skip90
-\sf@captopadj=\dimen173
+\sf@captopadj=\dimen275
 \sf@capskip=\skip91
 \sf@nearskip=\skip92
-\c@subfigure=\count133
-\c@subfigure@save=\count134
-\c@lofdepth=\count135
-\c@subtable=\count136
-\c@subtable@save=\count137
-\c@lotdepth=\count138
+\c@subfigure=\count152
+\c@subfigure@save=\count153
+\c@lofdepth=\count154
+\c@subtable=\count155
+\c@subtable@save=\count156
+\c@lotdepth=\count157
 \sf@top=\skip93
 \sf@bottom=\skip94
 )
@@ -898,111 +1159,111 @@ Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count139
-\FV@InFile=\read1
-\FV@TabBox=\box34
-\c@FancyVerbLine=\count140
-\FV@StepNumber=\count141
-\FV@OutFile=\write3
+\FV@CodeLineNo=\count158
+\FV@InFile=\read2
+\FV@TabBox=\box45
+\c@FancyVerbLine=\count159
+\FV@StepNumber=\count160
+\FV@OutFile=\write4
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip95
-\multirow@cntb=\count142
+\multirow@cntb=\count161
 \multirow@dima=\skip96
-\bigstrutjot=\dimen174
+\bigstrutjot=\dimen276
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
-\c@tracingmulticols=\count143
-\mult@box=\box35
-\multicol@leftmargin=\dimen175
-\c@unbalance=\count144
-\c@collectmore=\count145
-\doublecol@number=\count146
-\multicoltolerance=\count147
-\multicolpretolerance=\count148
-\full@width=\dimen176
-\page@free=\dimen177
-\premulticols=\dimen178
-\postmulticols=\dimen179
+\c@tracingmulticols=\count162
+\mult@box=\box46
+\multicol@leftmargin=\dimen277
+\c@unbalance=\count163
+\c@collectmore=\count164
+\doublecol@number=\count165
+\multicoltolerance=\count166
+\multicolpretolerance=\count167
+\full@width=\dimen278
+\page@free=\dimen279
+\premulticols=\dimen280
+\postmulticols=\dimen281
 \multicolsep=\skip97
 \multicolbaselineskip=\skip98
-\partial@page=\box36
-\last@line=\box37
-\maxbalancingoverflow=\dimen180
-\mult@rightbox=\box38
-\mult@grightbox=\box39
-\mult@gfirstbox=\box40
-\mult@firstbox=\box41
-\@tempa=\box42
-\@tempa=\box43
-\@tempa=\box44
-\@tempa=\box45
-\@tempa=\box46
-\@tempa=\box47
-\@tempa=\box48
-\@tempa=\box49
-\@tempa=\box50
-\@tempa=\box51
-\@tempa=\box52
+\partial@page=\box47
+\last@line=\box48
+\maxbalancingoverflow=\dimen282
+\mult@rightbox=\box49
+\mult@grightbox=\box50
+\mult@gfirstbox=\box51
+\mult@firstbox=\box52
 \@tempa=\box53
 \@tempa=\box54
 \@tempa=\box55
 \@tempa=\box56
 \@tempa=\box57
 \@tempa=\box58
-\c@columnbadness=\count149
-\c@finalcolumnbadness=\count150
-\last@try=\dimen181
-\multicolovershoot=\dimen182
-\multicolundershoot=\dimen183
-\mult@nat@firstbox=\box59
-\colbreak@box=\box60
-\mc@col@check@num=\count151
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\c@columnbadness=\count168
+\c@finalcolumnbadness=\count169
+\last@try=\dimen283
+\multicolovershoot=\dimen284
+\multicolundershoot=\dimen285
+\mult@nat@firstbox=\box70
+\colbreak@box=\box71
+\mc@col@check@num=\count170
 )
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip99
-\enit@outerparindent=\dimen184
-\enit@toks=\toks39
-\enit@inbox=\box61
-\enitdp@description=\count152
+\enit@outerparindent=\dimen286
+\enit@toks=\toks51
+\enit@inbox=\box72
+\enitdp@description=\count171
 ) (./slides.aux)
 \openout1 = `slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 79.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 92.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count153
-\scratchdimen=\dimen185
-\scratchbox=\box62
-\nofMPsegments=\count154
-\nofMParguments=\count155
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count156
-\MPscratchDim=\dimen186
-\MPnumerator=\count157
-\makeMPintoPDFobject=\count158
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count172
+\scratchdimen=\dimen287
+\scratchbox=\box73
+\nofMPsegments=\count173
+\nofMParguments=\count174
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count175
+\MPscratchDim=\dimen288
+\MPnumerator=\count176
+\makeMPintoPDFobject=\count177
+\everyMPtoPDFconversion=\toks53
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1056,13 +1317,13 @@ Package geometry Warning: The marginal notes overrun the paper.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 79.
+LaTeX Info: Redefining \selectfont on input line 92.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-\AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring ON on input line 79.
+\AtBeginShipoutBox=\box74
+Package hyperref Info: Link coloring ON on input line 92.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1070,60 +1331,61 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count159
+\c@section@level=\count178
 )
-LaTeX Info: Redefining \ref on input line 79.
-LaTeX Info: Redefining \pageref on input line 79.
-LaTeX Info: Redefining \nameref on input line 79.
+LaTeX Info: Redefining \ref on input line 92.
+LaTeX Info: Redefining \pageref on input line 92.
+LaTeX Info: Redefining \nameref on input line 92.
 
 (./slides.out) (./slides.out)
-\@outlinefile=\write4
-\openout4 = `slides.out'.
+\@outlinefile=\write5
+\openout5 = `slides.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
+ ABD: EveryShipout initializing macros
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 81.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 94.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <29.86> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 81.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 94.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 81.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 81.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 94.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 94.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 81.
-LaTeX Font Info:    Try loading font information for U+msa on input line 81.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 94.
+LaTeX Font Info:    Try loading font information for U+msa on input line 94.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 81.
+LaTeX Font Info:    Try loading font information for U+msb on input line 94.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 81.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 94.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-<./logos/Logo_RWTH_22Feb16.pdf, id=38, 171.64125pt x 48.18pt>
+<./logos/Logo_RWTH_22Feb16.pdf, id=53, 171.64125pt x 48.18pt>
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 84.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 97.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
-<./logos/Logo_HLT_22Feb16.pdf, id=40, 49.18375pt x 50.1875pt>
+<./logos/Logo_HLT_22Feb16.pdf, id=55, 49.18375pt x 50.1875pt>
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 84.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 97.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [1
 Non-PDF special ignored!
@@ -1134,7 +1396,8 @@ Non-PDF special ignored!
 pdf> <./logos/Logo_HLT_22Feb16.pdf>]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 98.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 111.
+
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1142,18 +1405,18 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 98.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 111.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [2
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 114.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 127.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <20.74> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 119.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 132.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 128.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 141.
 
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
@@ -1162,18 +1425,18 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 128.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 141.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [3
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 146.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 159.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 146.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 159.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 150.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 180.
 
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
@@ -1182,14 +1445,79 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 150.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 180.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [4
 
 ]
+(./architecture.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
+tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen289
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.markings.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex
+\pgfdecoratedcompleteddistance=\dimen290
+\pgfdecoratedremainingdistance=\dimen291
+\pgfdecoratedinputsegmentcompleteddistance=\dimen292
+\pgfdecoratedinputsegmentremainingdistance=\dimen293
+\pgf@decorate@distancetomove=\dimen294
+\pgf@decorate@repeatstate=\count179
+\pgfdecorationsegmentamplitude=\dimen295
+\pgfdecorationsegmentlength=\dimen296
+)
+\tikz@lib@dec@box=\box75
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.markings.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.3)
+\pgf@layerbox@background=\box76
+\pgf@layerboxsaved@background=\box77
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.5)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypetri.code.tex
+File: tikzlibrarypetri.code.tex 2013/07/17 v3.0.1a (rcs-revision 1.3)
+)
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 137.
+)
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 172.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 189.
 
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
@@ -1198,15 +1526,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 172.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 189.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
-
-[5
+ [5
 
 ]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 203.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 212.
 
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
@@ -1215,14 +1542,20 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 203.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 212.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [6
 
 ]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 217.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 217.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 217.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 225.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 244.
 
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
@@ -1231,14 +1564,18 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 225.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 244.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [7
 
 ]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 249.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 258.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 250.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 271.
 
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
@@ -1247,14 +1584,24 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 250.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 271.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [8
 
 ]
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 272.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\to' on input line 272.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 272.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 276.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 276.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 254.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 297.
 
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
@@ -1263,14 +1610,15 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 254.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 297.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [9
 
-] (./slides.bbl
+]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 34.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 326.
+
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1278,17 +1626,105 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 34.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 326.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
- [10
+ [10]
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 327.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\to' on input line 327.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 327.
+File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
+<use ./logos/Logo_RWTH_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 350.
+
+(pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
+Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
+ Make it at least 60.98552pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
+<use ./logos/Logo_HLT_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 350.
+(pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
+ [11
+
+
+]
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 351.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\to' on input line 351.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 351.
+File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
+<use ./logos/Logo_RWTH_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 377.
+
+(pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
+Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
+ Make it at least 60.98552pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
+<use ./logos/Logo_HLT_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 377.
+(pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
+ [12
+
+]
+File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
+<use ./logos/Logo_RWTH_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 398.
+
+(pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
+Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
+ Make it at least 60.98552pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
+<use ./logos/Logo_HLT_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 398.
+(pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
+ [13
+
+]
+File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
+<use ./logos/Logo_RWTH_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 402.
+
+(pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
+Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
+ Make it at least 60.98552pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
+<use ./logos/Logo_HLT_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 402.
+(pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
+ [14
+
+]
+(./slides.bbl
+File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
+<use ./logos/Logo_RWTH_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 33.
+(pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
+Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
+ Make it at least 60.98552pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
+<use ./logos/Logo_HLT_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 33.
+(pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
+ [15
 
 ])
-Package caption Warning: Unused \captionsetup[figure] on input line 260.
-See the caption package documentation for explanation.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 258.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf  used on input line 406.
 
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
@@ -1297,46 +1733,51 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 258.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf  used on input line 406.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
+ [16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 406.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 406.
  (./slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
-\snap@out=\write5
-\openout5 = `slides.dep'.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 406.
+\snap@out=\write6
+\openout6 = `slides.dep'.
 
 
 Dependency list written on slides.dep.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 406.
 Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: 58850B09422E12C4DD2E45D68C3D6F6A;414.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
+(rerunfilecheck)             Checksum: FA4B495A0AB5D528B5117824A5A0127B;630.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 406.
  ) 
 Here is how much of TeX's memory you used:
- 11940 strings out of 494798
- 174771 string characters out of 6176800
- 293024 words of memory out of 5000000
- 14998 multiletter control sequences out of 15000+600000
- 43114 words of font info for 73 fonts, out of 8000000 for 9000
+ 22930 strings out of 494798
+ 424616 string characters out of 6176800
+ 497894 words of memory out of 5000000
+ 25712 multiletter control sequences out of 15000+600000
+ 62268 words of font info for 110 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 43i,15n,49p,361b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,15n,65p,441b,891s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{sec:summary_and_future_work} has been referenced 
 but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{sec:experiments} has been referenced but does not e
+xist, replaced by a fixed one
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/hel
-vetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8
-a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on slides.pdf (11 pages, 96696 bytes).
+fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
+uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on slides.pdf (16 pages, 119761 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
- 75 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 245 PDF objects out of 1000 (max. 8388607)
+ 212 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
