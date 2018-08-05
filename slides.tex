@@ -93,19 +93,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \TitlePage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\NewPage
-\headline{Contextual Neural Machine Translation}
-
-\vfill
-\begin{description}
-\item \hyperlink{sec:motivation}{Motivation}
-\item \hyperlink{sec:sota}{State of the Art Literature}
-\item \hyperlink{sec:ongoing_work}{Ongoing Work at i6}
-\item \hyperlink{sec:experiments}{Experiments}
-\item \hyperlink{sec:summary_and_future_work}{Summary and Future Work}
-\end{description}
-\vfill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\NewPage
+%\headline{Contextual Neural Machine Translation}
+%
+%\vfill
+%\begin{description}
+%\item \hyperlink{sec:motivation}{Motivation}
+%\item \hyperlink{sec:sota}{State of the Art Literature}
+%\item \hyperlink{sec:ongoing_work}{Ongoing Work at i6}
+%\item \hyperlink{sec:experiments}{Experiments}
+%\item \hyperlink{sec:summary_and_future_work}{Summary and Future Work}
+%\end{description}
+%\vfill
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
@@ -115,16 +115,18 @@
 \begin{itemize}
   \item Most neural machine translation (NMT) systems translate sentence by sentence
   \item[]
-  \item Make use of other sentences in addition to exploit context information
+  \item Make use of surrounding sentences to exploit context information
   \begin{itemize}
     \item reduce ambiguities in translation choices
-    \item example: cross-sentence anaphora \cite{voita_2018}
+    \item example: cross-sentence anaphora in English$\to$German
   \end{itemize}
 \end{itemize}
 \vspace*{0.5cm}
 \begin{table}
- 	\caption{An English$
- 		\to$German example of a cross-sentence anaphora problem. The translation of the pronoun '\textcolor{orange}{it}' depends on the previous sentence.}
+  {\bf 
+% Explain in speech
+% 	\caption{An English$
+% 		\to$German example of a cross-sentence anaphora problem. The translation of the pronoun '\textcolor{orange}{it}' depends on the previous sentence.}
  	\begin{center}
  		\begin{tabular}{l||c}
  			Source sentences & Correct translation of '\textcolor{orange}{it}' \\
@@ -134,6 +136,7 @@
  			\textit{The \textcolor{brown}{monkey} ate the \textcolor{myyellow}{banana}. Because \textcolor{orange}{it} was tea-time.} & \textup{es}
  		\end{tabular}
  	\end{center}
+  }
 \end{table}
 \vfill
 
@@ -181,8 +184,24 @@ Remark: above methods only consider \emph{local} context
 \begin{center}
   \large Transformer Architecture with Concatenated \\
   Context Sentences
-\end{center}{\large}
+\end{center}
 \input{architecture}
+\begin{itemize}
+  \item one previous context-sentence on the source ($\tilde{f}_1^{J'}$) and target ($\tilde{e}_1^{I'}$) side
+  \item $<$BREAK$>$ token seperates the sentences
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\begin{center}
+  \large Transformer Architecture with Concatenated \\
+  Context Sentences
+\end{center}
+\input{architecture}
+\begin{itemize}
+  \item one previous context-sentence on the source ($\tilde{f}_1^{J'}$) and target ($\tilde{e}_1^{I'}$) side
+  \item $<$BREAK$>$ token seperates the sentences
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -193,15 +212,14 @@ Remark: above methods only consider \emph{local} context
 \begin{enumerate}
 	\item Reproduce results from \cite{agrawal_2018}
 	\begin{itemize}
-		\item using Transformer model as well
-    \item using data set of IWSLT 2017 English$\to$Italian
+		\item Transformer model
+    \item IWSLT 2017 English$\to$Italian
 		\item concatenate sentences with special token $<$BREAK$>$, \\
     example: \texttt{sentence\_1} $<$BREAK$>$ \texttt{sentence\_2}
  	\end{itemize}
-    \item compress context-sentences by pruning
+    \item Compress context-sentences by pruning
     \begin{itemize}
       \item first $n$ most-common words in training corpus
-      \item words that occur more than $n$ times in training corpus
       \item pre-defined stopword list
     \end{itemize}
   \item Test method of concatenation ($+$ pruning) on WMT 2018 German$\to$English data as well
@@ -210,29 +228,30 @@ Remark: above methods only consider \emph{local} context
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
-\headline{Ongoing Work at i6 - Concatenation}
+\headline{Concatenation}
 \vfill
 \begin{table}
-  \small 
-  \caption{\tiny Concatenation configurations. We denote string-concatenation by $\oplus$.}
+  \small
+  \bf
+%  \caption{\tiny Concatenation configurations. We denote string-concatenation by  $+$ .}
   \begin{center}
     \subfloat[Single target sentence.]{
     \begin{tabular}{l}
-      \phantom{1 previous$\oplus$}Source\phantom{$\oplus$1 next} $\to$ \phantom{+++$\oplus$}Target \\
+      \phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ \phantom{+++ $+$ }Target \\
       \toprule
-      1 previous$\oplus$current\phantom{$\oplus$1 next} $\to$ \phantom{1 previous$\oplus$}current \\
-      2 previous$\oplus$current\phantom{$\oplus$1 next} $\to$ \phantom{1 previous$\oplus$}current \\
-      1 previous$\oplus$current$\oplus$1 next $\to$ \phantom{1 previous$\oplus$}current \\
-      \phantom{1 previous$\oplus$}current\phantom{$\oplus$1 next} $\to$ \phantom{1 previous$\oplus$}current \\
+      1 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current \\
+      2 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current \\
+      1 previous $+$ current $+$ 1 next $\to$ \phantom{1 previous $+$ }current \\
+      \phantom{1 previous $+$ }current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current \\
     \end{tabular}
   }
   \vspace{0.80cm}
   \subfloat[Multiple target sentence.]{
   \begin{tabular}{l}
-    \phantom{1 previous$\oplus$}Source\phantom{$\oplus$1 next} $\to$ \phantom{+++$\oplus$}Target \\
+    \phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ \phantom{+++ $+$ }Target \\
     \toprule
-    1 previous$\oplus$current\phantom{$\oplus$1 next} $\to$ 1 previous$\oplus$current \\
-    1 previous$\oplus$current$\oplus$1 next $\to$ 1 previous$\oplus$current \\
+    1 previous $+$ current\phantom{ $+$ 1 next} $\to$ 1 previous $+$ current \\
+    1 previous $+$ current $+$ 1 next $\to$ 1 previous $+$ current \\
   \end{tabular}
   }
   \end{center}
@@ -242,11 +261,12 @@ Remark: above methods only consider \emph{local} context
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
-\headline{Experiments - Data}
+\headline{Data Statistics}
 \vfill
 \begin{table}
 \small
-\caption{\footnotesize Corpus statistics for both IWSLT 2017 English$\to$Italian and WMT 2018 German$\to$English experiments.}
+\bf
+%\caption{\footnotesize Corpus statistics for both IWSLT 2017 English$\to$Italian and WMT 2018 German$\to$English experiments.}
 \begin{center}
   \begin{tabular}{lp{1cm}r|rp{0.05cm}c|rp{0.05cm}c}
     & & & \multicolumn{3}{c|}{IWSLT'17 EN-IT} & \multicolumn{3}{c}{WMT'18 DE-EN} \\
@@ -269,25 +289,27 @@ Remark: above methods only consider \emph{local} context
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
-\headline{Experiments - Results: IWSLT 2017 English$\to$Italian}
+\headline{Results: IWSLT 2017 English$\to$Italian}
 \vfill
 \begin{table}
   \small
-  \caption{Evaluation results on the test set \textit{tst2017} with concatenation ($\oplus$). We report de-tokenized and cased BLEU scores.}
+  \bf
+  \caption{Evaluation results on the test set with concatenation ( $+$ ). We report de-tokenized and cased BLEU scores.}
   \begin{center}
     \begin{tabular}{c||cc}
+      & \multicolumn{2}{c}{\textit{tst2017}} \\
       & BLEU [$\%$] & TER $[\%]$ \\
       \toprule
       \toprule
-      \phantom{1 previous$\oplus$}current\phantom{$\oplus$1 next} $\to$ \phantom{1 previous$\oplus$}current & 29.89 & 52.04 \\
+      \phantom{1 previous $+$ }current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 29.89 & 52.0 \\
       \midrule
-      1 previous$\oplus$current\phantom{$\oplus$1 next} $\to$ \phantom{1 previous$\oplus$}current & 30.02 & 51.82 \\
-      2 previous$\oplus$current\phantom{$\oplus$1 next} $\to$ \phantom{1 previous$\oplus$}current & 29.81 & 52.20 \\
-      1 previous$\oplus$current$\oplus$1 next $\to$ \phantom{1 previous$\oplus$}current & 29.32 & 52.78 \\
-      \phantom{1 previous$\oplus$}current$\oplus$1 next $\to$ \phantom{1 previous$\oplus$}current & 29.93 & 51.87 \\
+      1 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 30.02 & 51.8 \\
+      2 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 29.81 & 52.2 \\
+      1 previous $+$ current $+$ 1 next $\to$ \phantom{1 previous $+$ }current & 29.32 & 52.8 \\
+      \phantom{1 previous $+$ }current $+$ 1 next $\to$ \phantom{1 previous $+$ }current & 29.93 & 51.9 \\
       \midrule
-      1 previous$\oplus$current\phantom{$\oplus$1 next} $\to$ 1 previous$\oplus$current & \tb{30.64} & \tb{50.95} \\
-      1 previous$\oplus$current$\oplus$1 next $\to$ 1 previous$\oplus$current & \tb{30.64} & 51.38 \\
+      1 previous $+$ current\phantom{ $+$ 1 next} $\to$ 1 previous $+$ current & \alert{30.64} & \alert{51.0} \\
+      1 previous $+$ current $+$ 1 next $\to$ 1 previous $+$ current & \alert{30.64} & 51.4 \\
     \end{tabular}
   \end{center}
 \end{table}
@@ -299,48 +321,52 @@ Remark: above methods only consider \emph{local} context
 \vfill
 \begin{table}
   \small
-  \caption{Evaluation results on the test set \textit{tst2017} with concatenation ($\oplus$) and a \emph{single} target sentence. We report de-tokenized and cased BLEU scores. We result best pruning results for each concatenation configuration.}
+  \bf
+  \caption{\emph{Single} target sentence.}
   \begin{center}
     \begin{tabular}{l||cc}
-      \phantom{1 previous$\oplus$}Source\phantom{$\oplus$1 next} $\to$ Target & BLEU [$\%$] & TER $[\%]$ \\
+      & \multicolumn{2}{c}{\textit{tst2017}} \\
+      \phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ Target & BLEU [$\%$] & TER $[\%]$ \\
       \toprule
       \toprule
-      \phantom{1 previous$\oplus$}current\phantom{$\oplus$1 next} $\to$ current & 29.89 & 52.04 \\
+      \phantom{1 previous $+$ }current\phantom{ $+$ 1 next} $\to$ current & 29.89 & 52.0 \\
       \midrule
-      1 previous$\oplus$current\phantom{$\oplus$1 next} $\to$ current & 30.02 & \tb{51.82} \\
-      \phantom{++} $+$ with most-common-100 pruning ($59\%$ pruned words) & \tb{30.03} & 52.04 \\
+      1 previous $+$ current\phantom{ $+$ 1 next} $\to$ current & 30.02 & \alert{51.8} \\
+      \phantom{++} $+$ with most-common-100 pruning ($59\%$ pruned words) & \alert{30.03} & 52.0 \\
       \midrule
-      2 previous$\oplus$current\phantom{$\oplus$1 next} $\to$ current & 29.81 & 52.20 \\
-      \phantom{++} $+$ with most-common-90 pruning ($57\%$ pruned words) & \tb{30.35} & \tb{51.38} \\
+      2 previous $+$ current\phantom{ $+$ 1 next} $\to$ current & 29.81 & 52.2 \\
+      \phantom{++} $+$ with most-common-90 pruning ($57\%$ pruned words) & \alert{30.35} & \alert{51.4} \\
       \midrule
-      1 previous$\oplus$current$\oplus$1 next $\to$ current & 29.32 & 52.78 \\
-      \phantom{++} $+$ with most-common-90 pruning ($57\%$ pruned words) & \tb{30.14} & \tb{51.77} \\
+      1 previous $+$ current $+$ 1 next $\to$ current & 29.32 & 52.9 \\
+      \phantom{++} $+$ with most-common-90 pruning ($57\%$ pruned words) & \alert{30.14} & \alert{51.8} \\
       \midrule
-      \phantom{$\oplus$1 previous}current$\oplus$1 next $\to$ current & 29.93 & 51.87 \\
-      \phantom{++} $+$ with most-common-100 pruning ($59\%$ pruned words) & \tb{30.00} & \tb{51.62}
+      \phantom{ $+$ 1 previous}current $+$ 1 next $\to$ current & 29.93 & 51.9 \\
+      \phantom{++} $+$ with most-common-100 pruning ($59\%$ pruned words) & \alert{30.00} & \alert{51.6}
     \end{tabular}
   \end{center}
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
-\headline{Experiments - Results: IWSLT 2017 English$\to$Italian}
+\headline{Results: IWSLT 2017 English$\to$Italian}
 \vspace*{1.5cm}
 \vfill
 \begin{table}
   \small
-  \caption{Evaluation results on the test set \textit{tst2017} with concatenation ($\oplus$) and \emph{multiple} target sentences. We report de-tokenized and cased BLEU scores. We result best pruning results for each concatenation configuration.}
+  \bf
+  \caption{\emph{Multiple} target sentences.}
   \begin{center}
     \begin{tabular}{c||cc}
-      \phantom{1 previous$\oplus$}Source\phantom{$\oplus$1 next} $\to$ \phantom{1 $\oplus$}Target & BLEU [$\%$] & TER $[\%]$ \\
+      & \multicolumn{2}{c}{\textit{tst2017}} \\
+      \phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ \phantom{1  $+$ }Target & BLEU [$\%$] & TER $[\%]$ \\
       \toprule
       \toprule
-      1 previous$\oplus$current\phantom{$\oplus$1 next} $\to$ 1 previous$\oplus$current & \tb{30.64} & \tb{50.95} \\
-      \phantom{++++++} $+$ with most-common-90 pruning ($57\%$ pruned words) & 30.09 & 52.08 \\
+      1 previous $+$ current\phantom{ $+$ 1 next} $\to$ 1 previous $+$ current & \alert{30.64} & \alert{51.0} \\
+      \phantom{++++++} $+$ with most-common-90 pruning ($57\%$ pruned words) & 30.09 & 52.0 \\
       \midrule
       \midrule
-      1 previous$\oplus$current$\oplus$1 next $\to$ 1 previous$\oplus$current & \tb{30.64} & \tb{51.38} \\
-      \phantom{++++++} $+$ with most-common-150 pruning ($64\%$ pruned words) & 30.18 & 51.64  \\
+      1 previous $+$ current $+$ 1 next $\to$ 1 previous $+$ current & \alert{30.64} & \alert{51.4} \\
+      \phantom{++++++} $+$ with most-common-150 pruning ($64\%$ pruned words) & 30.18 & 51.6  \\
     \end{tabular}
   \end{center}
 \end{table}
@@ -348,25 +374,27 @@ Remark: above methods only consider \emph{local} context
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
-\headline{Experiments - Results: WMT 2018 German$\to$English}
+\headline{Results: WMT 2018 German$\to$English}
 \vfill
 \begin{table}
   \small
-  \caption{Evaluation results on the test set \textit{newstest2017} with concatenation. We report de-tokenized and cased BLEU scores.}
+  \bf
+%  \caption{Evaluation results on the test set \textit{newstest2017} with concatenation. We report de-tokenized and cased BLEU scores.}
   \begin{center}
     \begin{tabular}{c||cc}
+      & \multicolumn{2}{c}{\textit{newstest2017}} \\
       & BLEU [$\%$] & TER $[\%]$ \\
       \toprule
       \toprule
-      \phantom{1 previous$\oplus$}current\phantom{$\oplus$1 next} $\to$ \phantom{1 previous$\oplus$}current & \tb{30.36} & \tb{50.99} \\
+      \phantom{1 previous $+$ }current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & \alert{30.36} & \alert{51.0} \\
       \midrule
-      1 previous$\oplus$current\phantom{$\oplus$1 next} $\to$ \phantom{1 previous$\oplus$}current & 30.13 & 51.44 \\
-      2 previous$\oplus$current\phantom{$\oplus$1 next} $\to$ \phantom{1 previous$\oplus$}current & 30.32 & 51.23 \\
-      1 previous$\oplus$current$\oplus$1 next $\to$ \phantom{1 previous$\oplus$}current & 30.28 & 51.23 \\
-      \phantom{1 previous$\oplus$}current$\oplus$1 next $\to$ \phantom{1 previous$\oplus$}current & 30.15 & 51.01 \\
+      1 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 30.13 & 51.4 \\
+      2 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 30.32 & 51.2 \\
+      1 previous $+$ current $+$ 1 next $\to$ \phantom{1 previous $+$ }current & 30.28 & 51.2 \\
+      \phantom{1 previous $+$ }current $+$ 1 next $\to$ \phantom{1 previous $+$ }current & 30.15 & 51.0 \\
       \midrule
-      1 previous$\oplus$current\phantom{$\oplus$1 next} $\to$ 1 previous$\oplus$current & 30.10 & 51.16 \\
-      1 previous$\oplus$current$\oplus$1 next $\to$ 1 previous$\oplus$current & 30.18 & 51.18
+      1 previous $+$ current\phantom{ $+$ 1 next} $\to$ 1 previous $+$ current & 30.10 & 51.2 \\
+      1 previous $+$ current $+$ 1 next $\to$ 1 previous $+$ current & 30.18 & 51.2
 \end{tabular}
   \end{center}
 \end{table}
@@ -380,16 +408,20 @@ Remark: above methods only consider \emph{local} context
 \begin{itemize}
   \item Concatenation of sentences yield slight performance increases with regards to BLEU and TER metrics
   \begin{itemize}
-    \item preliminary results on WMT 2018 German$\to$English \ToDo{maybe most-common pruning yields better results than baseline - wait till training is done}
+    \item preliminary results on WMT 2018 German$\to$English
   \end{itemize}
-  \item Simple compression by pruning words according to frequencies 
+  \item Simple compression by pruning words according to frequencies
+  \begin{itemize}
+    \item IWSLT data set: up to $+$1 BLEU improvement
+    \item WMT data set: \ToDo{check values}
+  \end{itemize}
 \end{itemize}
 \vspace*{1cm}
 Future work:
 \begin{itemize}
   \item Implementation of multi-encoder approaches\\ \cite{bawden_2018,voita_2018}
   \item Test approaches in discourse-heavy data sets \\ like OpenSubtitles \cite{lison_2016}
-  \item Consider global context information
+  \item Consider global context information: e.g. topic embedding
 \end{itemize}
 \vfill
 
