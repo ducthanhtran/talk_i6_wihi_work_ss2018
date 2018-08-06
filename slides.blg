@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: slides.aux
 The style file: i6bibliostyle.bst
 Database file #1: references.bib
@@ -11,49 +11,55 @@ while executing---line 1403 of file i6bibliostyle.bst
 `volume' is a missing field, not a string, for entry agrawal_2018
 while executing---line 1403 of file i6bibliostyle.bst
 Warning--there's no month in bawden_2018
-Warning--there's no month in libovicky_2017
+Warning--empty journal in lison_2016
+`volume' is a missing field, not a string, for entry lison_2016
+while executing---line 1403 of file i6bibliostyle.bst
+"" is a string literal, not an integer, for entry lison_2016
+while executing---line 1403 of file i6bibliostyle.bst
+`volume' is a missing field, not a string, for entry lison_2016
+while executing---line 1403 of file i6bibliostyle.bst
 Warning--there's no month in tiedemann_2017
 Warning--there's no month in voita_2018
 Warning--there's no month in zoph_2016
 You've used 6 entries,
             2596 wiz_defined-function locations,
-            604 strings with 5926 characters,
-and the built_in function-call counts, 3069 in all, are:
-= -- 306
+            603 strings with 5836 characters,
+and the built_in function-call counts, 2850 in all, are:
+= -- 281
 > -- 109
-< -- 11
+< -- 10
 + -- 34
 - -- 34
-* -- 241
-:= -- 425
+* -- 228
+:= -- 408
 add.period$ -- 12
 call.type$ -- 6
 change.case$ -- 35
 chr.to.int$ -- 6
 cite$ -- 12
-duplicate$ -- 149
-empty$ -- 240
+duplicate$ -- 136
+empty$ -- 215
 format.name$ -- 52
-if$ -- 672
+if$ -- 612
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 6
 newline$ -- 27
 num.names$ -- 18
-pop$ -- 51
+pop$ -- 49
 preamble$ -- 1
 purify$ -- 47
 quote$ -- 0
-skip$ -- 140
+skip$ -- 126
 stack$ -- 0
-substring$ -- 196
-swap$ -- 64
-text.length$ -- 8
+substring$ -- 164
+swap$ -- 53
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 48
 warning$ -- 6
-while$ -- 27
+while$ -- 24
 width$ -- 10
-write$ -- 75
-(There were 3 error messages)
+write$ -- 73
+(There were 6 error messages)
