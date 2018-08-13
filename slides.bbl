@@ -12,16 +12,33 @@ R.~Bawden, R.~Sennrich, A.~Birch, B.~Haddow: \newblock Evaluating Discourse
   Chapter of the Association for Computational Linguistics: Human Language
   Technologies, Volume 1 (Long Papers)}, Vol.~1, pp. 1304--1313, 2018.
 
+\bibitem[\protect{Kingma \& Ba} 14]{adam}
+D.P. Kingma, J.~Ba: \newblock Adam: A method for stochastic optimization.
+\newblock {\em arXiv preprint arXiv:1412.6980}, Vol., 2014.
+
 \bibitem[\protect{Lison \& Tiedemann} 16]{lison_2016}
 P.~Lison, J.~Tiedemann: \newblock Opensubtitles2016: Extracting large parallel
   corpora from movie and tv subtitles.
 \newblock Vol., 2016.
+
+\bibitem[\protect{Sennrich \& Haddow$^+$} 16]{bpe}
+R.~Sennrich, B.~Haddow, A.~Birch: \newblock Neural Machine Translation of Rare
+  Words with Subword Units.
+\newblock In {\em Proceedings of the 54th Annual Meeting of the Association for
+  Computational Linguistics (Volume 1: Long Papers)}, Vol.~1, pp. 1715--1725,
+  2016.
 
 \bibitem[\protect{Tiedemann \& Scherrer} 17]{tiedemann_2017}
 J.~Tiedemann, Y.~Scherrer: \newblock Neural Machine Translation with Extended
   Context.
 \newblock In {\em Proceedings of the Third Workshop on Discourse in Machine
   Translation}, pp. 82--92, 2017.
+
+\bibitem[\protect{Vaswani \& Shazeer$^+$} 17]{vaswani}
+A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.N. Gomez,
+  {\L}.~Kaiser, I.~Polosukhin: \newblock Attention is all you need.
+\newblock In {\em Advances in Neural Information Processing Systems}, pp.
+  5998--6008, 2017.
 
 \bibitem[\protect{Voita \& Sennrich$^+$} 18]{voita_2018}
 E.~Voita, R.~Sennrich, P.~Serdyukov, I.~Titov: \newblock Context-Aware Neural

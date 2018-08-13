@@ -1,10 +1,14 @@
 \BOOKMARK [0][]{2.0}{Motivation}{}% 1
 \BOOKMARK [0][]{3.0}{State of the Art Literature}{}% 2
-\BOOKMARK [0][]{5.0}{Ongoing Work at i6}{}% 3
-\BOOKMARK [0][]{6.0}{Concatenation}{}% 4
-\BOOKMARK [0][]{7.0}{Data Statistics}{}% 5
-\BOOKMARK [0][]{8.0}{Results: IWSLT 2017 EnglishItalian}{}% 6
-\BOOKMARK [0][]{10.0}{Results: IWSLT 2017 EnglishItalian}{}% 7
-\BOOKMARK [0][]{11.0}{Results: WMT 2018 GermanEnglish}{}% 8
-\BOOKMARK [0][]{12.0}{Summary and Future Work}{}% 9
-\BOOKMARK [0][]{13.0}{LastPage}{}% 10
+\BOOKMARK [0][]{6.0}{Ongoing Work at i6}{}% 3
+\BOOKMARK [0][]{7.0}{Concatenation}{}% 4
+\BOOKMARK [0][]{8.0}{Dropping Words in Context Sentences}{}% 5
+\BOOKMARK [0][]{9.0}{Data Statistics}{}% 6
+\BOOKMARK [0][]{10.0}{Training}{}% 7
+\BOOKMARK [0][]{11.0}{Results: IWSLT 2017 EnglishItalian}{}% 8
+\BOOKMARK [0][]{14.0}{IWSLT EnglishItalian: Cross-Attention Examples}{}% 9
+\BOOKMARK [0][]{16.0}{Results: WMT 2018 GermanEnglish}{}% 10
+\BOOKMARK [0][]{19.0}{Summary}{}% 11
+\BOOKMARK [0][]{20.0}{Future Work}{}% 12
+\BOOKMARK [0][]{21.0}{LastPage}{}% 13
+\BOOKMARK [0][]{24.0}{Appendix: Results from agrawal2018}{}% 14

@@ -31,6 +31,7 @@
 \usepackage{multirow}
 \usepackage{multicol}
 \usepackage{enumitem}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{xcolor}
 
@@ -63,7 +64,7 @@
 % short occasion title (used for \rfoot)
 \renewcommand*{\occasionshort}{}
 % default is \today (used for \TitlePage and \rfoot)
-\renewcommand*{\date}{Aug 02, 2018}
+\renewcommand*{\date}{Aug 16, 2018}
 % all the authors of the work, can be long (used for \TitlePage)
 \renewcommand*{\author}{Duc Thanh Tran}
 % all the authors of the work, should be short (used for \lfoot)
@@ -179,6 +180,27 @@ Remark: above methods only consider \emph{local} context
 %for $i,i',j,j'\in\mathbb{N}$ being suitable \emph{window} parameters.
 %\vfill
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\NewPage
+%\headline{Contextual Machine Translation}
+%\vfill
+%\begin{itemize}
+%	\item for context window offsets $i,j,i',j'\in\mathbb{N}_0$
+%	\item given target sentences $E_{0-i'},\ldots,E_0,\ldots,E_{0+j'}$ and \\
+%	source sentences $F_{0-i},\ldots,F_0,\ldots,F_{0+j}$
+%\end{itemize}
+%Find suitable translation of sentences
+%\begin{align*}
+%\hat{E}_{0-i'},\ldots,&E_0,\ldots,\hat{E}_{0+j'}
+%= \\
+%&\argmax\limits_{E_{0-i'},\ldots,E_0,\ldots,E_{0+j'}}
+%\Big\{
+%p(E_{0-i'},\ldots,E_0,\ldots,E_{0+j'}|F_{0-i},\ldots,F_0,\ldots,F_{0+j})
+%\Big\}
+%\end{align*}
+%\vfill
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
 \begin{center}
@@ -194,13 +216,12 @@ Remark: above methods only consider \emph{local} context
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
 \begin{center}
-  \large Transformer Architecture with Concatenated \\
-  Context Sentences
+  \large Multi-encoder Transformer Architecture
 \end{center}
-\input{architecture}
+%\input{architecture}
+\ToDo{Build multi-encoder}
 \begin{itemize}
-  \item one previous context-sentence on the source ($\tilde{f}_1^{J'}$) and target ($\tilde{e}_1^{I'}$) side
-  \item $<$BREAK$>$ token seperates the sentences
+  \item one previous context-sentence on the source ($\tilde{f}_1^{J'}$) is encoded seperately
 \end{itemize}
 
 
@@ -246,7 +267,7 @@ Remark: above methods only consider \emph{local} context
     \end{tabular}
   }
   \vspace{0.80cm}
-  \subfloat[Multiple target sentence.]{
+  \subfloat[Multiple target sentences.]{
   \begin{tabular}{l}
     \phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ \phantom{+++ $+$ }Target \\
     \toprule
@@ -258,6 +279,31 @@ Remark: above methods only consider \emph{local} context
 \end{table}
 \vfill
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline{Dropping Words in Context Sentences}
+\vfill
+\begin{itemize}
+	\item Remove punctuations first
+	\item Drop $MC\in\mathbb{N}$ most common words from the training corpus
+	\begin{itemize}
+		\item $DW \equiv$ Percentage of dropped words in a corpus
+		\item For $MC=90$ we obtain $DW=57\%$ on IWSLT En$\to$It data
+	\end{itemize}
+\end{itemize}
+\vspace*{1cm}
+\begin{center}
+\begin{tikzpicture}
+	\node (A) at (0,0) {\bf \textcolor{red}{And that} led \textcolor{red}{us} directly \textcolor{red}{to the} Olympic Village \textcolor{red}{.} };
+	\node (B) at (0,-3) {\bf led directly Olympic Village};
+	\draw[->,line width=3pt] (A) -- (B);
+\end{tikzpicture}
+\end{center}
+\begin{itemize}
+	\item[]
+	\item Concatenate shortened context-sentences to current one that is untouched
+\end{itemize}
+\vfill
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
@@ -289,23 +335,43 @@ Remark: above methods only consider \emph{local} context
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
+\headline{Training}
+\vfill
+\begin{itemize}
+	\item Transformer model \cite{vaswani} with 6 encoder/decoder layers
+	\item Model dimensionality: 512
+	\item Feed-forward network dimensionality: 2048
+	\item Attention-heads: 8
+	\item[]
+	\item Adam optimizer \cite{adam}
+	\begin{itemize}
+		\item learning rate: 0.0002
+		\item 2,000 warmup steps
+	\end{itemize}
+	\item[]
+	\item 32,000 Byte-pair encoding merges \cite{bpe}
+\end{itemize}
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
 \headline{Results: IWSLT 2017 English$\to$Italian}
 \vfill
 \begin{table}
   \small
   \bf
-  \caption{Evaluation results on the test set with concatenation ( $+$ ). We report de-tokenized and cased BLEU scores.}
+  \caption{Concatenation baselines.}
   \begin{center}
     \begin{tabular}{c||cc}
       & \multicolumn{2}{c}{\textit{tst2017}} \\
-      & BLEU [$\%$] & TER $[\%]$ \\
+      & BLEU [$\%$] & TER [$\%$] \\
       \toprule
       \toprule
       \phantom{1 previous $+$ }current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 29.89 & 52.0 \\
       \midrule
       1 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 30.02 & 51.8 \\
-      2 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 29.81 & 52.2 \\
-      1 previous $+$ current $+$ 1 next $\to$ \phantom{1 previous $+$ }current & 29.32 & 52.8 \\
+      2 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 30.00 & 52.1 \\
+      1 previous $+$ current $+$ 1 next $\to$ \phantom{1 previous $+$ }current & 30.46 & 52.0 \\
       \phantom{1 previous $+$ }current $+$ 1 next $\to$ \phantom{1 previous $+$ }current & 29.93 & 51.9 \\
       \midrule
       1 previous $+$ current\phantom{ $+$ 1 next} $\to$ 1 previous $+$ current & \alert{30.64} & \alert{51.0} \\
@@ -322,54 +388,73 @@ Remark: above methods only consider \emph{local} context
 \begin{table}
   \small
   \bf
-  \caption{\emph{Single} target sentence.}
+  \caption{Dropping most common words experiments: \emph{single} target sentence.}
   \begin{center}
-    \begin{tabular}{l||cc}
-      & \multicolumn{2}{c}{\textit{tst2017}} \\
-      \phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ Target & BLEU [$\%$] & TER $[\%]$ \\
+    \begin{tabular}{l|rr||cc}
+      && & \multicolumn{2}{c}{\textit{tst2017}} \\
+      \phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ Target & $MC$ & $DW$ & BLEU [$\%$] & TER [$\%$] \\
       \toprule
       \toprule
-      \phantom{1 previous $+$ }current\phantom{ $+$ 1 next} $\to$ current & 29.89 & 52.0 \\
+      \phantom{1 previous $+$ }current\phantom{ $+$ 1 next} $\to$ current & 0 & $0\%$ & 29.89 & 52.0 \\
       \midrule
-      1 previous $+$ current\phantom{ $+$ 1 next} $\to$ current & 30.02 & \alert{51.8} \\
-      \phantom{++} $+$ with most-common-100 pruning ($59\%$ pruned words) & \alert{30.03} & 52.0 \\
+      \multirow{2}{*}{1 previous $+$ current\phantom{ $+$ 1 next} $\to$ current} &0 & $0\%$ & 30.02 & \alert{51.8} \\
+      & 100 & $59\%$ & \alert{30.03} & 52.0 \\
       \midrule
-      2 previous $+$ current\phantom{ $+$ 1 next} $\to$ current & 29.81 & 52.2 \\
-      \phantom{++} $+$ with most-common-90 pruning ($57\%$ pruned words) & \alert{30.35} & \alert{51.4} \\
+      \multirow{2}{*}{2 previous $+$ current\phantom{ $+$ 1 next} $\to$ current} & 0 & $0\%$ & 30.00 & 52.1 \\
+      & 90 & $57\%$ & \alert{30.35} & \alert{51.4} \\
       \midrule
-      1 previous $+$ current $+$ 1 next $\to$ current & 29.32 & 52.9 \\
-      \phantom{++} $+$ with most-common-90 pruning ($57\%$ pruned words) & \alert{30.14} & \alert{51.8} \\
+      \multirow{2}{*}{1 previous $+$ current $+$ 1 next $\to$ current} & 0& $0\%$ & \alert{30.46} & 52.0 \\
+      & 90 & $57\%$ & 30.14 & \alert{51.8} \\
       \midrule
-      \phantom{ $+$ 1 previous}current $+$ 1 next $\to$ current & 29.93 & 51.9 \\
-      \phantom{++} $+$ with most-common-100 pruning ($59\%$ pruned words) & \alert{30.00} & \alert{51.6}
+      \multirow{2}{*}{\phantom{ $+$ 1 previous}current $+$ 1 next $\to$ current} & 0 & $0\%$ & 29.93 & 51.9 \\
+      &100 & $59\%$& \alert{30.00} & \alert{51.6}
     \end{tabular}
   \end{center}
 \end{table}
+\vfill
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
-\headline{Results: IWSLT 2017 English$\to$Italian}
+%\headline{Results: IWSLT 2017 English$\to$Italian}
 \vspace*{1.5cm}
 \vfill
 \begin{table}
   \small
   \bf
-  \caption{\emph{Multiple} target sentences.}
+  \caption{Dropping most common words experiments: \emph{multiple} target sentences.}
   \begin{center}
-    \begin{tabular}{c||cc}
-      & \multicolumn{2}{c}{\textit{tst2017}} \\
-      \phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ \phantom{1  $+$ }Target & BLEU [$\%$] & TER $[\%]$ \\
+    \begin{tabular}{l|rr||cc}
+      && & \multicolumn{2}{c}{\textit{tst2017}} \\
+      \phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ \phantom{1  $+$ }Target & $MC$ & $DW$ & BLEU [$\%$] & TER [$\%$] \\
       \toprule
       \toprule
-      1 previous $+$ current\phantom{ $+$ 1 next} $\to$ 1 previous $+$ current & \alert{30.64} & \alert{51.0} \\
-      \phantom{++++++} $+$ with most-common-90 pruning ($57\%$ pruned words) & 30.09 & 52.0 \\
+      \multirow{2}{*}{1 previous $+$ current\phantom{ $+$ 1 next} $\to$ 1 previous $+$ current} & 0 & $0\%$ & \alert{30.64} & \alert{51.0} \\
+      & 90 & $57\%$ & 30.09 & 52.0 \\
       \midrule
       \midrule
-      1 previous $+$ current $+$ 1 next $\to$ 1 previous $+$ current & \alert{30.64} & \alert{51.4} \\
-      \phantom{++++++} $+$ with most-common-150 pruning ($64\%$ pruned words) & 30.18 & 51.6  \\
+      \multirow{2}{*}{1 previous $+$ current $+$ 1 next $\to$ 1 previous $+$ current} & 0 & $0\%$ & \alert{30.64} & \alert{51.4} \\
+      & 150 & $64\%$ & 30.18 & 51.6  \\
     \end{tabular}
   \end{center}
 \end{table}
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline{IWSLT English$\to$Italian: Cross-Attention Examples}
+\vfill
+\begin{figure}
+	\includegraphics[width=\linewidth]{./img/concatenated.mc-90.src-prev2/sentence_258_layer_5.pdf}
+\end{figure}
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\vfill
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{./img/concatenated.mc-90.src-prev2/sentence_238_layer_3.pdf}
+\end{figure}
 \vfill
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -379,11 +464,11 @@ Remark: above methods only consider \emph{local} context
 \begin{table}
   \small
   \bf
-%  \caption{Evaluation results on the test set \textit{newstest2017} with concatenation. We report de-tokenized and cased BLEU scores.}
+  \caption{Concatenation baselines.}
   \begin{center}
     \begin{tabular}{c||cc}
       & \multicolumn{2}{c}{\textit{newstest2017}} \\
-      & BLEU [$\%$] & TER $[\%]$ \\
+      & BLEU [$\%$] & TER [$\%$] \\
       \toprule
       \toprule
       \phantom{1 previous $+$ }current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & \alert{30.36} & \alert{51.0} \\
@@ -398,30 +483,100 @@ Remark: above methods only consider \emph{local} context
 \end{tabular}
   \end{center}
 \end{table}
-\ToDo{another slide with most-common pruning - still in training}
 \vfill
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
-\headline{Summary and Future Work}
+%\headline{\small Experiments - Results: IWSLT 2017 English$\to$Italian}
+\vfill
+\begin{table}
+	\small
+	\bf
+	\caption{Dropping most common words experiments: \emph{single} target sentence.}
+	\begin{center}
+		\begin{tabular}{l|rr||cc}
+			&& & \multicolumn{2}{c}{\textit{newstest2017}} \\
+			\phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ Target & $MC$ & $DW$ & BLEU [$\%$] & TER [$\%$] \\
+			\toprule
+			\toprule
+			\phantom{1 previous $+$ }current\phantom{ $+$ 1 next} $\to$ current & 0 & $0\%$ & 30.36 & 51.0 \\
+			\midrule
+			\multirow{2}{*}{1 previous $+$ current\phantom{ $+$ 1 next} $\to$ current} &0 & $0\%$ & \alert{30.13} & 51.4 \\
+			& 300 & $57\%$ & 29.98 & \alert{50.86} \\
+			\midrule
+			\multirow{2}{*}{2 previous $+$ current\phantom{ $+$ 1 next} $\to$ current} & 0 & $0\%$ & \alert{30.32} & \alert{51.2} \\
+			& 300 & $57\%$ & 27.66 & 60.08 \\
+			\midrule
+			\multirow{2}{*}{1 previous $+$ current $+$ 1 next $\to$ current} & 0 & $0\%$ & \alert{30.28} & \alert{51.2} \\
+			& 300 & $57\%$ & 30.06 & 51.8 \\
+			\midrule
+			\multirow{2}{*}{\phantom{ $+$ 1 previous}current $+$ 1 next $\to$ current} & 0 & $0\%$ & 30.15 & \alert{51.0} \\
+			&300 & $57\%$& \alert{30.20} & 51.2
+		\end{tabular}
+	\end{center}
+\end{table}
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+%\headline{Results: WMT 2018 German$\to$English}
+\vspace*{1.5cm}
+\vfill
+\begin{table}
+	\small
+	\bf
+	\caption{Dropping most common words experiments: \emph{multiple} target sentences.}
+	\begin{center}
+		\begin{tabular}{l|rr||cc}
+			&& & \multicolumn{2}{c}{\textit{newstest2017}} \\
+			\phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ \phantom{1  $+$ }Target & $MC$ & $DW$ & BLEU [$\%$] & TER [$\%$] \\
+			\toprule
+			\toprule
+			\multirow{2}{*}{1 previous $+$ current\phantom{ $+$ 1 next} $\to$ 1 previous $+$ current} & 0 & $0\%$ & \alert{30.10} & \alert{51.0} \\
+			& 300 & $57\%$ & ???? & ??? \\
+			\midrule
+			\midrule
+			\multirow{2}{*}{1 previous $+$ current $+$ 1 next $\to$ 1 previous $+$ current} & 0 & $0\%$ & \alert{30.18} & \alert{51.4} \\
+			& 300 & $57\%$ & 27.31 & 54.4  \\
+		\end{tabular}
+	\end{center}
+\end{table}
+\vfill
+\ToDo{test set scoring}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline{Summary}
 \vfill
 \begin{itemize}
   \item Concatenation of sentences yield slight performance increases with regards to BLEU and TER metrics
   \begin{itemize}
-    \item preliminary results on WMT 2018 German$\to$English
+  	\item IWSLT En$\to$It: up to $+$0.7 BLEU improvement
+    \item WMT De$\to$En: no improvement
   \end{itemize}
-  \item Simple compression by pruning words according to frequencies
+  \item Simple compression by dropping words according to frequencies
   \begin{itemize}
-    \item IWSLT data set: up to $+$1 BLEU improvement
-    \item WMT data set: \ToDo{check values}
+    \item IWSLT En$\to$It: up to $+$1 BLEU improvement
+    \item WMT De$\to$En: no improvement
   \end{itemize}
+  \item English language is easier in terms of linguistic properties
+  \item Dropping only stopwords does not yield improvements
 \end{itemize}
 \vspace*{1cm}
-Future work:
+\vfill
+
+
+\NewPage
+\headline{Future Work}
+\vfill
 \begin{itemize}
-  \item Implementation of multi-encoder approaches\\ \cite{bawden_2018,voita_2018}
-  \item Test approaches in discourse-heavy data sets \\ like OpenSubtitles \cite{lison_2016}
-  \item Consider global context information: e.g. topic embedding
+	\item Implementation of multi-encoder approaches\\ \cite{bawden_2018,voita_2018}
+	\item Consider global context information: e.g. topic embedding
+	\item Test approaches in discourse-heavy data sets \\ like OpenSubtitles \cite{lison_2016}
+	\item More sophisticated evaluation with regards to discourse-phenomena 
+	\begin{itemize}
+		\item pronoun translation
+		\item co-reference
+	\end{itemize}
 \end{itemize}
 \vfill
 
@@ -434,5 +589,20 @@ Future work:
 \NewPage
 \bibliographystyle{i6bibliostyle}
 \bibliography{references}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline{Appendix: Results from \cite{agrawal_2018}}
+\ToDo{blub}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\begin{center}
+	\large Appendix: IWSLT English$\to$Italian \\
+	Dropping Stopwords
+\end{center}
+\ToDo{blub}
+
+
 
 \end{document}
