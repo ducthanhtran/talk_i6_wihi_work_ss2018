@@ -218,10 +218,10 @@ Remark: above methods only consider \emph{local} context
 \begin{center}
   \large Multi-encoder Transformer Architecture
 \end{center}
-%\input{architecture}
-\ToDo{Build multi-encoder}
+\input{architecture_2}
 \begin{itemize}
-  \item one previous context-sentence on the source ($\tilde{f}_1^{J'}$) is encoded seperately
+  \item Here: one source-context sentence $\tilde{f}_1^{J'}$ is encoded seperately
+  \item Integration mechanism is unclear: concatenation, gating mechanism, $\ldots$
 \end{itemize}
 
 
@@ -238,12 +238,13 @@ Remark: above methods only consider \emph{local} context
 		\item concatenate sentences with special token $<$BREAK$>$, \\
     example: \texttt{sentence\_1} $<$BREAK$>$ \texttt{sentence\_2}
  	\end{itemize}
-    \item Compress context-sentences by pruning
+    \item Compress context-sentences by dropping words
     \begin{itemize}
       \item first $n$ most-common words in training corpus
       \item pre-defined stopword list
     \end{itemize}
-  \item Test method of concatenation ($+$ pruning) on WMT 2018 German$\to$English data as well
+  \item Test method of concatenation ($+$ word dropping) on \\
+  WMT 2018 German$\to$English data as well
 \end{enumerate}
 \vfill
 
@@ -492,57 +493,61 @@ Remark: above methods only consider \emph{local} context
 \begin{table}
 	\small
 	\bf
-	\caption{Dropping most common words experiments: \emph{single} target sentence.}
+	\caption{Dropping most common words experiments.}
 	\begin{center}
 		\begin{tabular}{l|rr||cc}
 			&& & \multicolumn{2}{c}{\textit{newstest2017}} \\
 			\phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ Target & $MC$ & $DW$ & BLEU [$\%$] & TER [$\%$] \\
 			\toprule
 			\toprule
-			\phantom{1 previous $+$ }current\phantom{ $+$ 1 next} $\to$ current & 0 & $0\%$ & 30.36 & 51.0 \\
+			\phantom{1 previous $+$ }current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 0 & $0\%$ & 30.36 & 51.0 \\
 			\midrule
-			\multirow{2}{*}{1 previous $+$ current\phantom{ $+$ 1 next} $\to$ current} &0 & $0\%$ & \alert{30.13} & 51.4 \\
+			\multirow{2}{*}{1 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current} &0 & $0\%$ & \alert{30.13} & 51.4 \\
 			& 300 & $57\%$ & 29.98 & \alert{50.86} \\
 			\midrule
-			\multirow{2}{*}{2 previous $+$ current\phantom{ $+$ 1 next} $\to$ current} & 0 & $0\%$ & \alert{30.32} & \alert{51.2} \\
+			\multirow{2}{*}{2 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current} & 0 & $0\%$ & \alert{30.32} & \alert{51.2} \\
 			& 300 & $57\%$ & 27.66 & 60.08 \\
 			\midrule
-			\multirow{2}{*}{1 previous $+$ current $+$ 1 next $\to$ current} & 0 & $0\%$ & \alert{30.28} & \alert{51.2} \\
+			\multirow{2}{*}{1 previous $+$ current $+$ 1 next $\to$ \phantom{1 previous $+$ }current} & 0 & $0\%$ & \alert{30.28} & \alert{51.2} \\
 			& 300 & $57\%$ & 30.06 & 51.8 \\
 			\midrule
-			\multirow{2}{*}{\phantom{ $+$ 1 previous}current $+$ 1 next $\to$ current} & 0 & $0\%$ & 30.15 & \alert{51.0} \\
-			&300 & $57\%$& \alert{30.20} & 51.2
+			\multirow{2}{*}{\phantom{ $+$ 1 previous}current $+$ 1 next $\to$ \phantom{1 previous $+$ }current} & 0 & $0\%$ & 30.15 & \alert{51.0} \\
+			&300 & $57\%$& \alert{30.20} & 51.2 \\
+      \midrule
+      \midrule
+      \multirow{2}{*}{1 previous $+$ current $+$ 1 next $\to$ 1 previous $+$ current} & 0 & $0\%$ & \alert{30.18} & \alert{51.4} \\
+      & 300 & $57\%$ & 27.31 & 54.4  \\
 		\end{tabular}
 	\end{center}
 \end{table}
 \vfill
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\NewPage
-%\headline{Results: WMT 2018 German$\to$English}
-\vspace*{1.5cm}
-\vfill
-\begin{table}
-	\small
-	\bf
-	\caption{Dropping most common words experiments: \emph{multiple} target sentences.}
-	\begin{center}
-		\begin{tabular}{l|rr||cc}
-			&& & \multicolumn{2}{c}{\textit{newstest2017}} \\
-			\phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ \phantom{1  $+$ }Target & $MC$ & $DW$ & BLEU [$\%$] & TER [$\%$] \\
-			\toprule
-			\toprule
-			\multirow{2}{*}{1 previous $+$ current\phantom{ $+$ 1 next} $\to$ 1 previous $+$ current} & 0 & $0\%$ & \alert{30.10} & \alert{51.0} \\
-			& 300 & $57\%$ & ???? & ??? \\
-			\midrule
-			\midrule
-			\multirow{2}{*}{1 previous $+$ current $+$ 1 next $\to$ 1 previous $+$ current} & 0 & $0\%$ & \alert{30.18} & \alert{51.4} \\
-			& 300 & $57\%$ & 27.31 & 54.4  \\
-		\end{tabular}
-	\end{center}
-\end{table}
-\vfill
-\ToDo{test set scoring}
+%\NewPage
+%%\headline{Results: WMT 2018 German$\to$English}
+%\vspace*{1.5cm}
+%\vfill
+%\begin{table}
+%	\small
+%	\bf
+%	\caption{Dropping most common words experiments: \emph{multiple} target sentences.}
+%	\begin{center}
+%		\begin{tabular}{l|rr||cc}
+%			&& & \multicolumn{2}{c}{\textit{newstest2017}} \\
+%			\phantom{1 previous $+$ }Source\phantom{ $+$ 1 next} $\to$ \phantom{1  $+$ }Target & $MC$ & $DW$ & BLEU [$\%$] & TER [$\%$] \\
+%			\toprule
+%			\toprule
+%			\multirow{2}{*}{1 previous $+$ current\phantom{ $+$ 1 next} $\to$ 1 previous $+$ current} & 0 & $0\%$ & \alert{30.10} & \alert{51.0} \\
+%			& 300 & $57\%$ & ???? & ??? \\
+%			\midrule
+%			\midrule
+%			\multirow{2}{*}{1 previous $+$ current $+$ 1 next $\to$ 1 previous $+$ current} & 0 & $0\%$ & \alert{30.18} & \alert{51.4} \\
+%			& 300 & $57\%$ & 27.31 & 54.4  \\
+%		\end{tabular}
+%	\end{center}
+%\end{table}
+%\vfill
+%\ToDo{test set scoring}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
 \headline{Summary}
@@ -550,16 +555,18 @@ Remark: above methods only consider \emph{local} context
 \begin{itemize}
   \item Concatenation of sentences yield slight performance increases with regards to BLEU and TER metrics
   \begin{itemize}
-  	\item IWSLT En$\to$It: up to $+$0.7 BLEU improvement
-    \item WMT De$\to$En: no improvement
+  	\item IWSLT En$\to$It: up to $+$0.75 BLEU improvement
+    \item WMT De$\to$En: similar performance compared to baseline model
   \end{itemize}
-  \item Simple compression by dropping words according to frequencies
+  \item[]
+  \item Simple compression by dropping most common words
   \begin{itemize}
-    \item IWSLT En$\to$It: up to $+$1 BLEU improvement
-    \item WMT De$\to$En: no improvement
+    \item IWSLT En$\to$It: similar performance compared to concatenated models
+    \item WMT De$\to$En: mostly degradation in BLEU/TER
   \end{itemize}
+  \item[]
   \item English language is easier in terms of linguistic properties
-  \item Dropping only stopwords does not yield improvements
+  \item Dropping stopwords does not yield improvements
 \end{itemize}
 \vspace*{1cm}
 \vfill
@@ -593,16 +600,63 @@ Remark: above methods only consider \emph{local} context
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPage
 \headline{Appendix: Results from \cite{agrawal_2018}}
-\ToDo{blub}
+\vfill
+\begin{itemize}
+  \item Transformer model with concatenation
+  \item IWSLT 2017 English$\to$Italian
+\end{itemize}
+\begin{table}
+  \small
+  \bf
+%  \caption{Concatenation results from \cite{agrawal_2018}.}
+  \begin{center}
+    \begin{tabular}{c||cc}
+      & \multicolumn{2}{c}{\textit{tst2017}} \\
+      & BLEU [$\%$] & TER [$\%$] \\
+      \toprule
+      \toprule
+      \phantom{1 previous $+$ }current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 29.2 & 52.8 \\
+      \midrule
+      1 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 29.4 & 52.5 \\
+      2 previous $+$ current\phantom{ $+$ 1 next} $\to$ \phantom{1 previous $+$ }current & 29.8 & 51.9 \\
+      1 previous $+$ current $+$ 1 next $\to$ \phantom{1 previous $+$ }current & 30.6 & 51.1 \\
+      \phantom{1 previous $+$ }current $+$ 1 next $\to$ \phantom{1 previous $+$ }current & 29.7 & 51.9 \\
+      \midrule
+      1 previous $+$ current\phantom{ $+$ 1 next} $\to$ 1 previous $+$ current & 29.5 & 52.1 \\
+      1 previous $+$ current $+$ 1 next $\to$ 1 previous $+$ current & \alert{31.5} & \alert{49.7} \\
+    \end{tabular}
+  \end{center}
+\end{table}
+\vfill
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\NewPage
-\begin{center}
-	\large Appendix: IWSLT English$\to$Italian \\
-	Dropping Stopwords
-\end{center}
-\ToDo{blub}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\NewPage
+%\begin{center}
+%	\large Appendix: Multi-encoder Transformer 
+%\end{center}
+%\begin{itemize}
+%  \item Source-context sentence: $\tilde{f}_1,\ldots,\tilde{f}_{j'},\ldots,\tilde{f}_{J'}$
+%  \item Source sentence: $f_1,\ldots,f_j,\ldots,f_J$,
+%  \item[]
+%  \item Representation vectors of last layers $L,M\in\mathbb{N}$ from encoders
+%  \begin{itemize}
+%        \item source-context sentence: $\tilde{h}_{j'}^{(L)}$, $j'=1,\ldots,J'$
+%    \item source sentence: $h_{j}^{(M)}$, $j=1,\ldots,J$
+%  \end{itemize}
+%  \item[]
+%  \item Compute $n$ context vectors via Multi-Head-Attention mechanism over all source representation vectors $h_{j}^{(N)}$ and $\tilde{h}_{j'}^{(M)}$
+%  \begin{itemize}
+%    \item[] for $n=1,\ldots,n$:
+%    \item context vectors for source sentence: $c_i$
+%    \item context vectors for source-context sentence: $\tilde{c}_i$
+%  \end{itemize}
+%\end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\NewPage
+%\begin{center}
+%  \large Appendix: Multi-encoder Transformer - Concatenation
+%\end{center}
 
 
 \end{document}
